@@ -1,12 +1,1 @@
-# Default values for classic-db.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-era: May1999
-
-items:
-- id: 123
-  Name: "My item"
-  ac: 3
-- id: 456
-  Name: "My other item"
-  ac: 5
+era: 0

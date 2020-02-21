@@ -1,0 +1,16 @@
+eras: [ 0, 1, 2 ]
+id: 200
+Name: "Banded Boots"
+ac: 12
+str: 5
+---
+eras: [ 5 ]
+id: 200
+Name: "Banded Boots"
+ac: 12
+---
+eras: [ 8, 9, 10 ]
+id: 200
+Name: "Banded Boots"
+ac: 12
+str: 5
