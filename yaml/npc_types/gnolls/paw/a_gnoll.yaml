@@ -1,0 +1,17 @@
+eras: [ 0, 1, 2, 3 ]
+id: 444
+name: "a_gnoll"
+level: 5
+hp: 20
+mana: 20
+race: 39
+texture: 1
+---
+eras: [ 4, 5, 6, 7, 8, 9, 10 ]
+id: 444
+name: "a_gnoll"
+level: 3
+hp: 20
+mana: 20
+race: 39
+texture: 1

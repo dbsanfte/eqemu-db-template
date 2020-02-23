@@ -1751,3 +1751,736 @@
     {{ .UNK241 }},
     {{- end }}
 {{- end -}}
+
+{{- define "npctypesColumnNames" -}}
+    {{- if .id }}
+    id,
+    {{- end }}
+    {{- if .name }}
+    name,
+    {{- end }}
+    {{- if .lastname }}
+    lastname,
+    {{- end }}
+    {{- if .level }}
+    level,
+    {{- end }}
+    {{- if .race }}
+    race,
+    {{- end }}
+    {{- if .class }}
+    class,
+    {{- end }}
+    {{- if .bodytype }}
+    bodytype,
+    {{- end }}
+    {{- if .hp }}
+    hp,
+    {{- end }}
+    {{- if .mana }}
+    mana,
+    {{- end }}
+    {{- if .gender }}
+    gender,
+    {{- end }}
+    {{- if .texture }}
+    texture,
+    {{- end }}
+    {{- if .helmtexture }}
+    helmtexture,
+    {{- end }}
+    {{- if .herosforgemodel }}
+    herosforgemodel,
+    {{- end }}
+    {{- if .size }}
+    size,
+    {{- end }}
+    {{- if .hp_regen_rate }}
+    hp_regen_rate,
+    {{- end }}
+    {{- if .mana_regen_rate }}
+    mana_regen_rate,
+    {{- end }}
+    {{- if .loottable_id }}
+    loottable_id,
+    {{- end }}
+    {{- if .merchant_id }}
+    merchant_id,
+    {{- end }}
+    {{- if .alt_currency_id }}
+    alt_currency_id,
+    {{- end }}
+    {{- if .npc_spells_id }}
+    npc_spells_id,
+    {{- end }}
+    {{- if .npc_spells_effects_id }}
+    npc_spells_effects_id,
+    {{- end }}
+    {{- if .npc_faction_id }}
+    npc_faction_id,
+    {{- end }}
+    {{- if .adventure_template_id }}
+    adventure_template_id,
+    {{- end }}
+    {{- if .trap_template }}
+    trap_template,
+    {{- end }}
+    {{- if .mindmg }}
+    mindmg,
+    {{- end }}
+    {{- if .maxdmg }}
+    maxdmg,
+    {{- end }}
+    {{- if .attack_count }}
+    attack_count,
+    {{- end }}
+    {{- if .npcspecialattks }}
+    npcspecialattks,
+    {{- end }}
+    {{- if .special_abilities }}
+    special_abilities,
+    {{- end }}
+    {{- if .aggroradius }}
+    aggroradius,
+    {{- end }}
+    {{- if .assistradius }}
+    assistradius,
+    {{- end }}
+    {{- if .face }}
+    face,
+    {{- end }}
+    {{- if .luclin_hairstyle }}
+    luclin_hairstyle,
+    {{- end }}
+    {{- if .luclin_haircolor }}
+    luclin_haircolor,
+    {{- end }}
+    {{- if .luclin_eyecolor }}
+    luclin_eyecolor,
+    {{- end }}
+    {{- if .luclin_eyecolor2 }}
+    luclin_eyecolor2,
+    {{- end }}
+    {{- if .luclin_beardcolor }}
+    luclin_beardcolor,
+    {{- end }}
+    {{- if .luclin_beard }}
+    luclin_beard,
+    {{- end }}
+    {{- if .drakkin_heritage }}
+    drakkin_heritage,
+    {{- end }}
+    {{- if .drakkin_tattoo }}
+    drakkin_tattoo,
+    {{- end }}
+    {{- if .drakkin_details }}
+    drakkin_details,
+    {{- end }}
+    {{- if .armortint_id }}
+    armortint_id,
+    {{- end }}
+    {{- if .armortint_red }}
+    armortint_red,
+    {{- end }}
+    {{- if .armortint_green }}
+    armortint_green,
+    {{- end }}
+    {{- if .armortint_blue }}
+    armortint_blue,
+    {{- end }}
+    {{- if .d_melee_texture1 }}
+    d_melee_texture1,
+    {{- end }}
+    {{- if .d_melee_texture2 }}
+    d_melee_texture2,
+    {{- end }}
+    {{- if .ammo_idfile }}
+    ammo_idfile,
+    {{- end }}
+    {{- if .prim_melee_type }}
+    prim_melee_type,
+    {{- end }}
+    {{- if .sec_melee_type }}
+    sec_melee_type,
+    {{- end }}
+    {{- if .ranged_type }}
+    ranged_type,
+    {{- end }}
+    {{- if .runspeed }}
+    runspeed,
+    {{- end }}
+    {{- if .MR }}
+    MR,
+    {{- end }}
+    {{- if .CR }}
+    CR,
+    {{- end }}
+    {{- if .DR }}
+    DR,
+    {{- end }}
+    {{- if .FR }}
+    FR,
+    {{- end }}
+    {{- if .PR }}
+    PR,
+    {{- end }}
+    {{- if .Corrup }}
+    Corrup,
+    {{- end }}
+    {{- if .PhR }}
+    PhR,
+    {{- end }}
+    {{- if .see_invis }}
+    see_invis,
+    {{- end }}
+    {{- if .see_invis_undead }}
+    see_invis_undead,
+    {{- end }}
+    {{- if .qglobal }}
+    qglobal,
+    {{- end }}
+    {{- if .AC }}
+    AC,
+    {{- end }}
+    {{- if .npc_aggro }}
+    npc_aggro,
+    {{- end }}
+    {{- if .spawn_limit }}
+    spawn_limit,
+    {{- end }}
+    {{- if .attack_speed }}
+    attack_speed,
+    {{- end }}
+    {{- if .attack_delay }}
+    attack_delay,
+    {{- end }}
+    {{- if .findable }}
+    findable,
+    {{- end }}
+    {{- if .STR }}
+    STR,
+    {{- end }}
+    {{- if .STA }}
+    STA,
+    {{- end }}
+    {{- if .DEX }}
+    DEX,
+    {{- end }}
+    {{- if .AGI }}
+    AGI,
+    {{- end }}
+    {{- if ._INT }}
+    _INT,
+    {{- end }}
+    {{- if .WIS }}
+    WIS,
+    {{- end }}
+    {{- if .CHA }}
+    CHA,
+    {{- end }}
+    {{- if .see_hide }}
+    see_hide,
+    {{- end }}
+    {{- if .see_improved_hide }}
+    see_improved_hide,
+    {{- end }}
+    {{- if .trackable }}
+    trackable,
+    {{- end }}
+    {{- if .isbot }}
+    isbot,
+    {{- end }}
+    {{- if .exclude }}
+    exclude,
+    {{- end }}
+    {{- if .ATK }}
+    ATK,
+    {{- end }}
+    {{- if .Accuracy }}
+    Accuracy,
+    {{- end }}
+    {{- if .Avoidance }}
+    Avoidance,
+    {{- end }}
+    {{- if .slow_mitigation }}
+    slow_mitigation,
+    {{- end }}
+    {{- if .version }}
+    version,
+    {{- end }}
+    {{- if .maxlevel }}
+    maxlevel,
+    {{- end }}
+    {{- if .scalerate }}
+    scalerate,
+    {{- end }}
+    {{- if .private_corpse }}
+    private_corpse,
+    {{- end }}
+    {{- if .unique_spawn_by_name }}
+    unique_spawn_by_name,
+    {{- end }}
+    {{- if .underwater }}
+    underwater,
+    {{- end }}
+    {{- if .isquest }}
+    isquest,
+    {{- end }}
+    {{- if .emoteid }}
+    emoteid,
+    {{- end }}
+    {{- if .spellscale }}
+    spellscale,
+    {{- end }}
+    {{- if .healscale }}
+    healscale,
+    {{- end }}
+    {{- if .no_target_hotkey }}
+    no_target_hotkey,
+    {{- end }}
+    {{- if .raid_target }}
+    raid_target,
+    {{- end }}
+    {{- if .armtexture }}
+    armtexture,
+    {{- end }}
+    {{- if .bracertexture }}
+    bracertexture,
+    {{- end }}
+    {{- if .handtexture }}
+    handtexture,
+    {{- end }}
+    {{- if .legtexture }}
+    legtexture,
+    {{- end }}
+    {{- if .feettexture }}
+    feettexture,
+    {{- end }}
+    {{- if .light }}
+    light,
+    {{- end }}
+    {{- if .walkspeed }}
+    walkspeed,
+    {{- end }}
+    {{- if .peqid }}
+    peqid,
+    {{- end }}
+    {{- if .unique_ }}
+    unique_,
+    {{- end }}
+    {{- if .fixed }}
+    fixed,
+    {{- end }}
+    {{- if .ignore_despawn }}
+    ignore_despawn,
+    {{- end }}
+    {{- if .show_name }}
+    show_name,
+    {{- end }}
+    {{- if .untargetable }}
+    untargetable,
+    {{- end }}
+    {{- if .charm_ac }}
+    charm_ac,
+    {{- end }}
+    {{- if .charm_min_dmg }}
+    charm_min_dmg,
+    {{- end }}
+    {{- if .charm_max_dmg }}
+    charm_max_dmg,
+    {{- end }}
+    {{- if .charm_attack_delay }}
+    charm_attack_delay,
+    {{- end }}
+    {{- if .charm_accuracy_rating }}
+    charm_accuracy_rating,
+    {{- end }}
+    {{- if .charm_avoidance_rating }}
+    charm_avoidance_rating,
+    {{- end }}
+    {{- if .charm_atk }}
+    charm_atk,
+    {{- end }}
+    {{- if .skip_global_loot }}
+    skip_global_loot,
+    {{- end }}
+    {{- if .rare_spawn }}
+    rare_spawn,
+    {{- end }}
+    {{- if .stuck_behavior }}
+    stuck_behavior,
+    {{- end }}
+    {{- if .model }}
+    model,
+    {{- end }}
+    {{- if .flymode }}
+    flymode,
+    {{- end }}
+{{- end -}}
+
+{{- define "npctypesValues" -}}
+    {{- if .id }}
+    {{ .id }},
+    {{- end }}
+    {{- if .name }}
+    {{ .name | squote }},
+    {{- end }}
+    {{- if .lastname }}
+    {{ .lastname | squote }},
+    {{- end }}
+    {{- if .level }}
+    {{ .level }},
+    {{- end }}
+    {{- if .race }}
+    {{ .race }},
+    {{- end }}
+    {{- if .class }}
+    {{ .class }},
+    {{- end }}
+    {{- if .bodytype }}
+    {{ .bodytype }},
+    {{- end }}
+    {{- if .hp }}
+    {{ .hp }},
+    {{- end }}
+    {{- if .mana }}
+    {{ .mana }},
+    {{- end }}
+    {{- if .gender }}
+    {{ .gender }},
+    {{- end }}
+    {{- if .texture }}
+    {{ .texture }},
+    {{- end }}
+    {{- if .helmtexture }}
+    {{ .helmtexture }},
+    {{- end }}
+    {{- if .herosforgemodel }}
+    {{ .herosforgemodel }},
+    {{- end }}
+    {{- if .size }}
+    {{ .size }},
+    {{- end }}
+    {{- if .hp_regen_rate }}
+    {{ .hp_regen_rate }},
+    {{- end }}
+    {{- if .mana_regen_rate }}
+    {{ .mana_regen_rate }},
+    {{- end }}
+    {{- if .loottable_id }}
+    {{ .loottable_id }},
+    {{- end }}
+    {{- if .merchant_id }}
+    {{ .merchant_id }},
+    {{- end }}
+    {{- if .alt_currency_id }}
+    {{ .alt_currency_id }},
+    {{- end }}
+    {{- if .npc_spells_id }}
+    {{ .npc_spells_id }},
+    {{- end }}
+    {{- if .npc_spells_effects_id }}
+    {{ .npc_spells_effects_id }},
+    {{- end }}
+    {{- if .npc_faction_id }}
+    {{ .npc_faction_id }},
+    {{- end }}
+    {{- if .adventure_template_id }}
+    {{ .adventure_template_id }},
+    {{- end }}
+    {{- if .trap_template }}
+    {{ .trap_template }},
+    {{- end }}
+    {{- if .mindmg }}
+    {{ .mindmg }},
+    {{- end }}
+    {{- if .maxdmg }}
+    {{ .maxdmg }},
+    {{- end }}
+    {{- if .attack_count }}
+    {{ .attack_count }},
+    {{- end }}
+    {{- if .npcspecialattks }}
+    {{ .npcspecialattks | squote }},
+    {{- end }}
+    {{- if .special_abilities }}
+    {{ .special_abilities | squote }},
+    {{- end }}
+    {{- if .aggroradius }}
+    {{ .aggroradius }},
+    {{- end }}
+    {{- if .assistradius }}
+    {{ .assistradius }},
+    {{- end }}
+    {{- if .face }}
+    {{ .face }},
+    {{- end }}
+    {{- if .luclin_hairstyle }}
+    {{ .luclin_hairstyle }},
+    {{- end }}
+    {{- if .luclin_haircolor }}
+    {{ .luclin_haircolor }},
+    {{- end }}
+    {{- if .luclin_eyecolor }}
+    {{ .luclin_eyecolor }},
+    {{- end }}
+    {{- if .luclin_eyecolor2 }}
+    {{ .luclin_eyecolor2 }},
+    {{- end }}
+    {{- if .luclin_beardcolor }}
+    {{ .luclin_beardcolor }},
+    {{- end }}
+    {{- if .luclin_beard }}
+    {{ .luclin_beard }},
+    {{- end }}
+    {{- if .drakkin_heritage }}
+    {{ .drakkin_heritage }},
+    {{- end }}
+    {{- if .drakkin_tattoo }}
+    {{ .drakkin_tattoo }},
+    {{- end }}
+    {{- if .drakkin_details }}
+    {{ .drakkin_details }},
+    {{- end }}
+    {{- if .armortint_id }}
+    {{ .armortint_id }},
+    {{- end }}
+    {{- if .armortint_red }}
+    {{ .armortint_red }},
+    {{- end }}
+    {{- if .armortint_green }}
+    {{ .armortint_green }},
+    {{- end }}
+    {{- if .armortint_blue }}
+    {{ .armortint_blue }},
+    {{- end }}
+    {{- if .d_melee_texture1 }}
+    {{ .d_melee_texture1 }},
+    {{- end }}
+    {{- if .d_melee_texture2 }}
+    {{ .d_melee_texture2 }},
+    {{- end }}
+    {{- if .ammo_idfile }}
+    {{ .ammo_idfile | squote }},
+    {{- end }}
+    {{- if .prim_melee_type }}
+    {{ .prim_melee_type }},
+    {{- end }}
+    {{- if .sec_melee_type }}
+    {{ .sec_melee_type }},
+    {{- end }}
+    {{- if .ranged_type }}
+    {{ .ranged_type }},
+    {{- end }}
+    {{- if .runspeed }}
+    {{ .runspeed }},
+    {{- end }}
+    {{- if .MR }}
+    {{ .MR }},
+    {{- end }}
+    {{- if .CR }}
+    {{ .CR }},
+    {{- end }}
+    {{- if .DR }}
+    {{ .DR }},
+    {{- end }}
+    {{- if .FR }}
+    {{ .FR }},
+    {{- end }}
+    {{- if .PR }}
+    {{ .PR }},
+    {{- end }}
+    {{- if .Corrup }}
+    {{ .Corrup }},
+    {{- end }}
+    {{- if .PhR }}
+    {{ .PhR }},
+    {{- end }}
+    {{- if .see_invis }}
+    {{ .see_invis }},
+    {{- end }}
+    {{- if .see_invis_undead }}
+    {{ .see_invis_undead }},
+    {{- end }}
+    {{- if .qglobal }}
+    {{ .qglobal }},
+    {{- end }}
+    {{- if .AC }}
+    {{ .AC }},
+    {{- end }}
+    {{- if .npc_aggro }}
+    {{ .npc_aggro }},
+    {{- end }}
+    {{- if .spawn_limit }}
+    {{ .spawn_limit }},
+    {{- end }}
+    {{- if .attack_speed }}
+    {{ .attack_speed }},
+    {{- end }}
+    {{- if .attack_delay }}
+    {{ .attack_delay }},
+    {{- end }}
+    {{- if .findable }}
+    {{ .findable }},
+    {{- end }}
+    {{- if .STR }}
+    {{ .STR }},
+    {{- end }}
+    {{- if .STA }}
+    {{ .STA }},
+    {{- end }}
+    {{- if .DEX }}
+    {{ .DEX }},
+    {{- end }}
+    {{- if .AGI }}
+    {{ .AGI }},
+    {{- end }}
+    {{- if ._INT }}
+    {{ ._INT }},
+    {{- end }}
+    {{- if .WIS }}
+    {{ .WIS }},
+    {{- end }}
+    {{- if .CHA }}
+    {{ .CHA }},
+    {{- end }}
+    {{- if .see_hide }}
+    {{ .see_hide }},
+    {{- end }}
+    {{- if .see_improved_hide }}
+    {{ .see_improved_hide }},
+    {{- end }}
+    {{- if .trackable }}
+    {{ .trackable }},
+    {{- end }}
+    {{- if .isbot }}
+    {{ .isbot }},
+    {{- end }}
+    {{- if .exclude }}
+    {{ .exclude }},
+    {{- end }}
+    {{- if .ATK }}
+    {{ .ATK }},
+    {{- end }}
+    {{- if .Accuracy }}
+    {{ .Accuracy }},
+    {{- end }}
+    {{- if .Avoidance }}
+    {{ .Avoidance }},
+    {{- end }}
+    {{- if .slow_mitigation }}
+    {{ .slow_mitigation }},
+    {{- end }}
+    {{- if .version }}
+    {{ .version }},
+    {{- end }}
+    {{- if .maxlevel }}
+    {{ .maxlevel }},
+    {{- end }}
+    {{- if .scalerate }}
+    {{ .scalerate }},
+    {{- end }}
+    {{- if .private_corpse }}
+    {{ .private_corpse }},
+    {{- end }}
+    {{- if .unique_spawn_by_name }}
+    {{ .unique_spawn_by_name }},
+    {{- end }}
+    {{- if .underwater }}
+    {{ .underwater }},
+    {{- end }}
+    {{- if .isquest }}
+    {{ .isquest }},
+    {{- end }}
+    {{- if .emoteid }}
+    {{ .emoteid }},
+    {{- end }}
+    {{- if .spellscale }}
+    {{ .spellscale }},
+    {{- end }}
+    {{- if .healscale }}
+    {{ .healscale }},
+    {{- end }}
+    {{- if .no_target_hotkey }}
+    {{ .no_target_hotkey }},
+    {{- end }}
+    {{- if .raid_target }}
+    {{ .raid_target }},
+    {{- end }}
+    {{- if .armtexture }}
+    {{ .armtexture }},
+    {{- end }}
+    {{- if .bracertexture }}
+    {{ .bracertexture }},
+    {{- end }}
+    {{- if .handtexture }}
+    {{ .handtexture }},
+    {{- end }}
+    {{- if .legtexture }}
+    {{ .legtexture }},
+    {{- end }}
+    {{- if .feettexture }}
+    {{ .feettexture }},
+    {{- end }}
+    {{- if .light }}
+    {{ .light }},
+    {{- end }}
+    {{- if .walkspeed }}
+    {{ .walkspeed }},
+    {{- end }}
+    {{- if .peqid }}
+    {{ .peqid }},
+    {{- end }}
+    {{- if .unique_ }}
+    {{ .unique_ }},
+    {{- end }}
+    {{- if .fixed }}
+    {{ .fixed }},
+    {{- end }}
+    {{- if .ignore_despawn }}
+    {{ .ignore_despawn }},
+    {{- end }}
+    {{- if .show_name }}
+    {{ .show_name }},
+    {{- end }}
+    {{- if .untargetable }}
+    {{ .untargetable }},
+    {{- end }}
+    {{- if .charm_ac }}
+    {{ .charm_ac }},
+    {{- end }}
+    {{- if .charm_min_dmg }}
+    {{ .charm_min_dmg }},
+    {{- end }}
+    {{- if .charm_max_dmg }}
+    {{ .charm_max_dmg }},
+    {{- end }}
+    {{- if .charm_attack_delay }}
+    {{ .charm_attack_delay }},
+    {{- end }}
+    {{- if .charm_accuracy_rating }}
+    {{ .charm_accuracy_rating }},
+    {{- end }}
+    {{- if .charm_avoidance_rating }}
+    {{ .charm_avoidance_rating }},
+    {{- end }}
+    {{- if .charm_atk }}
+    {{ .charm_atk }},
+    {{- end }}
+    {{- if .skip_global_loot }}
+    {{ .skip_global_loot }},
+    {{- end }}
+    {{- if .rare_spawn }}
+    {{ .rare_spawn }},
+    {{- end }}
+    {{- if .stuck_behavior }}
+    {{ .stuck_behavior }},
+    {{- end }}
+    {{- if .model }}
+    {{ .model }},
+    {{- end }}
+    {{- if .flymode }}
+    {{ .flymode }},
+    {{- end }}
+{{- end -}}
+
