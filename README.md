@@ -69,7 +69,7 @@ REPLACE INTO items
     ac,
     astr,
     classes,
-    races,
+    races
 )
 VALUES
 (
@@ -78,7 +78,7 @@ VALUES
     5,
     5,
     13318,
-    163,
+    163
 );
 ```
 

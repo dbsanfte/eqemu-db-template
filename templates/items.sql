@@ -2,10 +2,10 @@
 {{- range $itemIndex, $item := .Values.items }}
 REPLACE INTO items
 (
-    {{- template "itemsColumnNames" $item }}
+    {{- include "itemsColumnNames" $item | trimSuffix "," }}
 )
 VALUES
 (
-    {{- template "itemsValues" $item }}
+    {{- include "itemsValues" $item | trimSuffix "," }}
 );
 {{- end }}
