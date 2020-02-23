@@ -55,7 +55,31 @@ Next, run `./resolve-era.sh n` where `n` is the era you want to resolve SQL for.
 
 This will populate the root `values.yaml` with the items.
 
-Finally, run `helm template .` to generate the actual SQL. This will be a series of `REPLACE INTO` statements that will actually insert the items into the PEQ/EQEmu compatible database.
+Finally, run `helm template .` to generate the actual SQL. This will be a series of `REPLACE INTO` statements that will actually insert the items into the PEQ/EQEmu compatible database:
+
+`
+---
+# Source: eqemu-db-template/templates/items.sql
+/* This generates the main output using the above: */
+REPLACE INTO items
+(
+    id,
+    Name,
+    ac,
+    astr,
+    classes,
+    races,
+)
+VALUES
+(
+    123,
+    'Cloth Cap',
+    5,
+    5,
+    13318,
+    163,
+);
+`
 
 ## YAML conventions:
 
