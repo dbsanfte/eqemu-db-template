@@ -31,8 +31,6 @@ do
         do
             if [ $item -eq $ERA ]
             then
-                echo "DEBUG: erasArray is $erasArray"
-                echo "DEBUG: $item equals $ERA and LOOP_INDEX is $LOOP_INDEX"
                 echo $LOOP_INDEX > /tmp/DOC_COUNT
                 break
             fi
