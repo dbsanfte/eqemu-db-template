@@ -13,7 +13,9 @@ Needless to say, running this under a Linux distro or WSL is probably mandatory.
 ### Installing the yq Utility:
 
 `sudo add-apt-repository ppa:rmescandon/yq`
+
 `sudo apt update`
+
 `sudo apt install yq -y`
 
 ## How to Use
