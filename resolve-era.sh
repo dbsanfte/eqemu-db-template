@@ -18,15 +18,16 @@ yq d -i ./values.yaml 'items'
 # Iterate through items and pick ones that match our era:
 rm -rf /tmp/era-items && mkdir -p /tmp/era-items
 ITEM_INDEX=0
+
 find ./items/* -type f -name '*.yaml' | while read file
 do
-    declare -A documentEras
-
     DOC_COUNT=-1
     rm -rf /tmp/DOC_COUNT
     LOOP_INDEX=0
+
     yq -d'*' r "$file" 'eras' | while read erasArray
     do
+        # strip the [ and ] from the line, turn commas into spaces, then read the eras line as a bash array:
         for item in $(echo "$erasArray" | awk '{print substr($0, 2, length($0) - 2)}' | sed 's/,/ /g')
         do
             if [ $item -eq $ERA ]
@@ -47,6 +48,7 @@ do
     then
         echo "WARN: Failed to find matching era for file $file. Skipping."
     else
+        echo "Processing era for file ${file}..."
         yq r -d${DOC_COUNT} "$file" > /tmp/era-items/${ITEM_INDEX}.yaml
         yq p -i /tmp/era-items/${ITEM_INDEX}.yaml 'items[+]'
         ((ITEM_INDEX=ITEM_INDEX+1))
@@ -64,3 +66,5 @@ else
     echo "ERROR: No files were output because nothing matched era rules."
     exit 1
 fi
+
+echo "Done."
