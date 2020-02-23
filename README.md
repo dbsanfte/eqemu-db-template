@@ -21,7 +21,7 @@ Right now it supports era versioning for the Items table. I will add others soon
 
 To use this chart, add items to the `./items/` subfolder in whichever tree structure you desire, one file per item. A few example items are provided, such as this Cloth Cap in `./items/armor/cloth/cloth-cap.yaml`:
 
-`
+``` yaml
 eras: [ 0, 1, 2, 3, 4 ]
 id: 123
 Name: "Cloth Cap"
@@ -44,7 +44,7 @@ Name: "Cloth Cap"
 ac: 2
 races: ["WAR"]
 classes: ["ALL"]
-`
+```
 
 This defines 3 versions of the Cloth Cap: 
 - version 1 is for eras 0-4 
@@ -57,8 +57,7 @@ This will populate the root `values.yaml` with the items.
 
 Finally, run `helm template .` to generate the actual SQL. This will be a series of `REPLACE INTO` statements that will actually insert the items into the PEQ/EQEmu compatible database:
 
-`
----
+``` sql
 # Source: eqemu-db-template/templates/items.sql
 /* This generates the main output using the above: */
 REPLACE INTO items
@@ -79,7 +78,7 @@ VALUES
     13318,
     163,
 );
-`
+```
 
 ## YAML conventions:
 
