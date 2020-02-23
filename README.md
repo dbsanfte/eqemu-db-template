@@ -88,4 +88,4 @@ All fields are named according to their column names in the db, except for the s
 
 - In the items table in the db, stats are prefixed with the letter `a` which I find dumb. So I removed that prefix for the YAML.
 
-- Races/Classes are stored in the db using a bitmap, which is hard to read. Therefore I set up some template functions to convert the normal uppercase race/class abbreviations in EQ into bit flags. It does all the mathy stuff for you. See the examples for how to use, but basically, list either the races/classes you want, or just "ALL" for all. Caps are mandatory because I'm lazy.
+- Races/Classes are stored in the db using a bitmap, which is hard to read. Therefore I set up some template functions to convert the normal uppercase race/class abbreviations in EQ into bit flags. It does all the mathy stuff for you. See the examples for how to use, but basically, list either the races/classes you want, "ALL" for all, or "NONE" for none. Caps are mandatory because I'm lazy.
