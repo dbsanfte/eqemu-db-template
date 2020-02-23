@@ -1,16 +1,1 @@
-items:
-- eras: [0, 1, 2]
-  id: 200
-  Name: "Banded Boots"
-  ac: 12
-  str: 5
-  races: ["ALL"]
-  classes: ["ALL"]
-- eras: [0, 1, 2, 3, 4]
-  id: 123
-  Name: "Cloth Cap"
-  ac: 5
-  str: 5
-  races: ["HUM", "BAR", "DEF", "DWF"]
-  classes: ["CLR", "ENC", "MAG", "NEC", "PAL"]
 era: 0
