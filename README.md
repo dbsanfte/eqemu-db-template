@@ -29,23 +29,23 @@ id: 123
 Name: "Cloth Cap"
 ac: 5
 str: 5
-races: ["HUM", "BAR", "DEF", "DWF"]
 classes: ["CLR", "ENC", "MAG", "NEC", "PAL"]
+races: ["HUM", "BAR", "DEF", "DWF"]
 ---
 eras: [ 5, 6, 7 ]
 id: 123
 Name: "Cloth Cap"
 ac: 3
 int: 3
-races: ["ALL"]
 classes: ["ALL"]
+races: ["ALL"]
 ---
 eras: [ 8, 9, 10 ]
 id: 123
 Name: "Cloth Cap"
 ac: 2
-races: ["WAR"]
-classes: ["ALL"]
+classes: ["WAR"]
+races: ["ALL"]
 ```
 
 This defines 3 versions of the Cloth Cap: 
