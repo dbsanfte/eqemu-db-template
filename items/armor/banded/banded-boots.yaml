@@ -10,7 +10,7 @@ eras: [ 5 ]
 id: 200
 Name: "Banded Boots"
 ac: 12
-races: ["ALL"]
+races: ["NONE"]
 classes: ["ALL"]
 ---
 eras: [ 8, 9, 10 ]
@@ -19,4 +19,4 @@ Name: "Banded Boots"
 ac: 12
 str: 5
 races: ["ALL"]
-classes: ["ALL"]
+classes: ["NONE"]
